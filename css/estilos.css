@@ -1,0 +1,128 @@
+    *{
+    padding: 0;
+    margin: 0;
+}
+ 
+body{
+    height: 100vh;
+    background: #584040;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor {
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+
+    background: url(../img/fondo.png);
+    background-size: 960px 280px ;
+    background-position-x: 0px;
+    transition: background-color 1s lineal;
+    overflow: hidden;
+}
+
+
+.dino {
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    z-index: 2;
+
+    background: url(../img/timmy4.png) repeat-x 0px 0px;
+    background-size: 666px 84px;
+    background-position-x: 0px;
+
+}
+
+.dino-corriendo {
+    animation: animarDino 0.8s steps(8) infinite;
+}
+.dino-estrellado {
+    width: 84px;
+    height: 84px;
+    background: url(../img/timmy3.png) repeat-x 0px 0px;
+    background-size: 756px 84px;
+    background-position-x: -672px;
+}
+
+.suelo {
+    width: 200%;
+    height: 42px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url(../img/suelo.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+
+}
+
+.cactus{
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 700px;
+    z-index: 1;
+
+    background: url(../img/globo2.png) no-repeat;
+}
+
+.nube{
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 700px;
+    z-index: 0;
+
+    background: url(../img/algodón2.png) no-repeat;
+    background-size: 55px 84px;
+}
+
+.score{
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+
+    color: #d48871;
+    font-family: Verdana;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.game-over{
+    display: none;
+
+    position: absolute;
+    width: 100%;
+
+
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+}
+
+@keyframes animarDino{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -756px;
+    }
+}
